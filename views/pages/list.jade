@@ -1,0 +1,28 @@
+xtend ../layout
+
+block content
+  .container
+    .row
+      table.table.table-hover.table-bordered
+        thead
+          tr
+            th 电影的名字
+            th 导演
+            th 国家
+            th 上映年份
+            th 录入时间
+            th 查看
+            th 删除
+        tbdoy
+          each item in movies
+          tr(class="item-id-#{item._id}")
+            id #{item.title}
+            id #{item.doctor}
+            id #{item.country}
+            id #{item.year}
+            id #{momment(item.meta.createAt).format('MM/DD/YYY')}
+            td: a(target="_blank", href="../movie/#{item_id}") 查看
+            td: a(target="_blank", href="../admin/update/#{item_id}") 修改
+            td
+              button.btn.btn-danger.del(typr="button", data-id="#{item_id}") 删除
+
