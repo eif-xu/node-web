@@ -20,7 +20,7 @@ block content
             id #{item.doctor}
             id #{item.country}
             id #{item.year}
-            id #{momment(item.meta.createAt).format('MM/DD/YYY')}
+            id #{moment(item.meta.createAt).format('MM/DD/YYY')}
             td: a(target="_blank", href="../movie/#{item_id}") 查看
             td: a(target="_blank", href="../admin/update/#{item_id}") 修改
             td
